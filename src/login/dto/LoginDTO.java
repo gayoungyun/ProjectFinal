@@ -2,6 +2,7 @@ package login.dto;
 
 public class LoginDTO {
 	private String id, pwd, name, tel;
+	public static String userId;
 
 	public String getId() {
 		return id;

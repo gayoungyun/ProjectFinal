@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="basket.controller.Controller">
+   <children>
+      <ImageView fitHeight="72.0" fitWidth="273.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane layoutX="12.0" layoutY="66.0" prefHeight="40.0" prefWidth="773.0" style="-fx-background-color: gray;">
+         <children>
+            <Label accessibleRole="BUTTON" layoutX="141.0" layoutY="11.0" onMouseClicked="#goListPage" text="쇼핑리스트" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label accessibleRole="BUTTON" layoutX="36.0" layoutY="11.0" onMouseClicked="#gotoMain" text="메인페이지" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label accessibleRole="BUTTON" layoutX="246.0" layoutY="11.0" text="장바구니" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="14.0" prefHeight="40.0" prefWidth="800.0">
+         <children>
+            <Label accessibleRole="BUTTON" layoutX="558.0" layoutY="13.0" onMouseClicked="#goLoginPage" text="로그아웃">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label accessibleRole="BUTTON" layoutX="636.0" layoutY="13.0" onMouseClicked="#chkMyinfo" text="내 정보 확인">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label accessibleRole="BUTTON" layoutX="726.0" layoutY="13.0" text="공지사항">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="149.0" layoutX="14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../Download/resources/images/png-transparent-computer-icons-shopping-centre-mall-angle-rectangle-shopping-centre.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="45.0" layoutY="151.0" text="장바구니 리스트">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_RIGHT" layoutX="14.0" layoutY="213.0" prefHeight="200.0" prefWidth="27.0">
+         <children>
+            <CheckBox fx:id="check1" mnemonicParsing="false" onAction="#cartBtn1">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="check2" mnemonicParsing="false" onAction="#cartBtn2">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="check3" mnemonicParsing="false" onAction="#cartBtn3">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="check4" mnemonicParsing="false" onAction="#cartBtn4">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="check5" mnemonicParsing="false" onAction="#cartBtn5">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="check6" mnemonicParsing="false" onAction="#cartBtn6">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="check7" mnemonicParsing="false" onAction="#cartBtn7">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </CheckBox>
+         </children>
+      </VBox>
+      <TableView fx:id="itemList" layoutX="45.0" layoutY="180.0" prefHeight="221.0" prefWidth="739.0">
+         <columns>
+            <TableColumn fx:id="itemNum" prefWidth="95.0" text="상품 번호" />
+            <TableColumn fx:id="itemName" prefWidth="480.0" text="상품 이름" />
+            <TableColumn fx:id="itemPrice" minWidth="0.0" prefWidth="163.0" text="가격" />
+         </columns>
+      </TableView>
+      <Label layoutX="429.0" layoutY="528.0" text="총 가격 :">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalPrice" layoutX="561.0" layoutY="528.0" text="0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="546.0" layoutY="446.0" mnemonicParsing="false" onAction="#buybtn" text="구매하기" />
+      <Button layoutX="635.0" layoutY="446.0" mnemonicParsing="false" onAction="#cancelBasket" text="선택취소" />
+   </children>
+</AnchorPane>

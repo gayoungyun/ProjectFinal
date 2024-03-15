@@ -9,10 +9,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="search.pwd.controller.SearchPwdController">
    <children>
-      <AnchorPane layoutX="10.0" layoutY="10.0">
+      <AnchorPane layoutY="2.0" prefHeight="198.0" prefWidth="394.0">
          <children>
             <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="198.0" prefWidth="394.0">
                <children>
@@ -33,12 +32,12 @@
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID" textAlignment="CENTER" wrappingWidth="101.91015625" />
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PHONE NUM" textAlignment="CENTER" wrappingWidth="102.109375" GridPane.rowIndex="1" />
-                        <TextField fx:id="searchIdName" promptText="아이디 입력" GridPane.columnIndex="1" />
-                        <TextField fx:id="searchIdNum" promptText="전화번호 입력" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="searchPwdId" promptText="아이디 입력" GridPane.columnIndex="1" />
+                        <TextField fx:id="searchPwdNum" promptText="전화번호 입력" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
-                  <Button fx:id="btnSearch" layoutX="104.0" layoutY="155.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="76.0" text="찾기" />
-                  <Button fx:id="btnClosePwd" layoutX="208.0" layoutY="155.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="76.0" text="닫기" />
+                  <Button fx:id="btnSearchPwd1" layoutX="104.0" layoutY="155.0" mnemonicParsing="false" onAction="#search_PwdFunc" prefHeight="22.0" prefWidth="76.0" text="찾기" />
+                  <Button fx:id="btnClosePwd" layoutX="208.0" layoutY="155.0" mnemonicParsing="false" onAction="#cancelFunc2" prefHeight="22.0" prefWidth="76.0" text="닫기" />
                </children>
             </AnchorPane>
          </children>

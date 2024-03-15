@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="common_project.memberManageController">
+   <children>
+      <ImageView fitHeight="72.0" fitWidth="273.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane layoutX="12.0" layoutY="66.0" prefHeight="40.0" prefWidth="773.0" style="-fx-background-color: gray;">
+         <children>
+            <Label accessibleRole="BUTTON" layoutX="141.0" layoutY="11.0" onMouseClicked="#moveShopListFunc" text="상품 관리" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label accessibleRole="BUTTON" layoutX="36.0" layoutY="11.0" onMouseClicked="#moveMainPageFunc" text="회원 관리" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="14.0" prefHeight="40.0" prefWidth="800.0">
+         <children>
+            <Label accessibleRole="BUTTON" layoutX="558.0" layoutY="13.0" onMouseClicked="#logoutFunc" text="로그아웃">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label accessibleRole="BUTTON" layoutX="636.0" layoutY="13.0" onMouseClicked="#myPageFunc" text="내 정보 확인">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label accessibleRole="BUTTON" layoutX="726.0" layoutY="13.0" onMouseClicked="#noticeFunc" text="공지사항">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="149.0" layoutX="14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../Download/resources/images/png-transparent-computer-icons-shopping-centre-mall-angle-rectangle-shopping-centre.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView layoutX="40.0" layoutY="161.0" prefHeight="357.0" prefWidth="718.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="이름" />
+          <TableColumn prefWidth="75.0" text="ID" />
+            <TableColumn prefWidth="75.0" text="Password" />
+            <TableColumn prefWidth="75.0" text="핸드폰번호" />
+            <TableColumn prefWidth="75.0" text="생년월일" />
+            <TableColumn prefWidth="75.0" text="관리자" />
+            <TableColumn prefWidth="75.0" text="성별" />
+            <TableColumn prefWidth="75.0" text="총 구매 금액" />
+        </columns>
+      </TableView>
+      <Label layoutX="40.0" layoutY="135.0" text="전체 회원 리스트" />
+      <Button layoutX="287.0" layoutY="537.0" mnemonicParsing="false" text="회원 삭제" />
+      <Button layoutX="399.0" layoutY="537.0" mnemonicParsing="false" text="구매목록 확인" />
+   </children>
+</AnchorPane>
